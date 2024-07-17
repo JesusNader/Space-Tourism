@@ -1,0 +1,191 @@
+$very-dark-navy: #0B0D17;
+$light-blue: #D0D6F6;
+$white: #ffffff;
+$barlow-condensed: 'Barlow Condensed', sans-serif;
+$bellefair: 'Bellefair', sans-serif;
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 84%;
+    height: 88px;
+    margin: 0 auto;
+
+    .logo-container {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .right-header-section {
+        .menu-mobile-container {
+            display: none;
+        }
+
+        .nav-menu-container {
+            .menu-close-container {
+                display: none;
+            }
+        }
+    }
+}
+
+main {
+    .section-hero-container {
+        width: 90%;
+        margin: 12px auto;
+
+        .hero-container {
+            list-style: none;
+
+            .hero-texts {
+                height: 294px;
+
+                h3 {
+                    color: $light-blue;
+                    text-align: center;
+                    font-family: $barlow-condensed;
+                    font-size: 16px;
+                    font-weight: 200;
+                    letter-spacing: 2px;
+                }
+
+                h1 {
+                    margin: 26px 0;
+                    color: $white;
+                    text-align: center;
+                    font-family: $bellefair;
+                    font-size: 80px;
+                    font-weight: normal;
+                }
+
+                p {
+                    color: $light-blue;
+                    text-align: center;
+                    font-family: $barlow-condensed;
+                    font-size: 15px;
+                    font-weight: 200;
+                    line-height: 180%;
+                }
+            }
+
+            .hero-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 382px;
+
+                button {
+                    width: 144px;
+                    height: 144px;
+                    border: none;
+                    border-radius: 50%;
+                    font-family: $bellefair;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        background-image: url(../assets/home/background-home-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 0px;
+    }
+
+    header {
+        .right-header-section {
+            .menu-mobile-container {
+                display: block;
+                width: 24px;
+                height: 21px;
+                background-image: url(../assets/shared/icon-hamburger.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .nav-menu-container {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 254px;
+                backdrop-filter: blur(30px);
+                transition: .3s;
+
+                .menu-close-container {
+                    position: absolute;
+                    top: 18px;
+                    right: 20px;
+                    display: block;
+                    width: 24px;
+                    height: 21px;
+                    background-image: url(../assets/shared/icon-close.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                .nav-list-container {
+                    margin-top: 130px;
+
+                    li {
+                        margin: 26px 0px 26px 28px;
+                        // border-right: 3px solid $white;
+                        list-style: none;
+
+                        span {
+                            padding-right: 12px;
+                            color: $white;
+                            font-family: $barlow-condensed;
+                            font-size: 16px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                        }
+
+                        a {
+                            display: inline-block;
+                            width: 86%;
+                            color: $white;
+                            font-size: 16px;
+                            font-weight: 200;
+                            font-family: $barlow-condensed;
+                            text-decoration: none;
+                            letter-spacing: 2px;
+                        }
+                    }
+
+                    li[class="home-page"],
+                    li[class="destination"],
+                    li[class="crew"],
+                    li[class="technology"] {
+                        border-right: 3px solid $white;
+                    }
+                }
+            }
+
+            .visible {
+                visibility: visible;
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+    }
+}
