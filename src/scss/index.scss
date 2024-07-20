@@ -179,7 +179,7 @@ header {
     }
 }
 
-.main-destination-moon {
+.main-destination {
     margin-top: 12px;
 
     .destinations-container {
@@ -342,7 +342,7 @@ header {
         background-image: url(../assets/home/background-home-mobile.jpg);
     }
 
-    .body-moon {
+    .body-destinations {
         background-image: url(../assets/destination/background-destination-mobile.png);
     }
 
@@ -424,7 +424,7 @@ header {
         background-image: url(../assets/home/background-home-tablet.jpg);
     }
 
-    .body-moon {
+    .body-destinations {
         background-image: url(../assets/destination/background-destination-tablet.png);
     }
 
@@ -524,7 +524,7 @@ header {
         }
     }
 
-    .main-destination-moon {
+    .main-destination {
         .destinations-container {
             .page-title-container {
                 justify-content: start;
@@ -581,7 +581,7 @@ header {
         overflow: hidden;
     }
 
-    .body-moon {
+    .body-destinations {
         background-image: url(../assets/destination/background-destination-desktop.png);
     }
 
@@ -705,7 +705,7 @@ header {
         }
     }
 
-    .main-destination-moon {
+    .main-destination {
         .destinations-container {
             .page-title-container {
                 justify-content: start;
@@ -751,6 +751,24 @@ header {
                         .description-container {
                             .description {
                                 text-align: start;
+                            }
+
+                            .texts {
+                                .name-destiny {
+                                    font-size: 96px;
+                                }
+
+                                .description-destiny {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .statistics {
+                                display: flex;
+
+                                .distance-container {
+                                    margin-right: 80px;
+                                }
                             }
                         }
                     }
