@@ -48,20 +48,26 @@ header {
                 list-style: none;
 
                 li {
-                    span {
-                        color: $white;
-                        font-family: $barlow-condensed;
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-
+                    // padding: 0;
                     a {
-                        color: $white;
-                        font-family: $barlow-condensed;
-                        font-size: 16px;
-                        font-weight: 200;
+                        display: flex;
                         text-decoration: none;
-                        letter-spacing: 2px;
+                        line-height: 86px;
+
+                        span {
+                            color: $white;
+                            font-family: $barlow-condensed;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            color: $white;
+                            font-family: $barlow-condensed;
+                            font-size: 16px;
+                            font-weight: 200;
+                            letter-spacing: 2px;
+                        }
                     }
                 }
 
@@ -173,13 +179,171 @@ header {
     }
 }
 
+.main-destination-moon {
+    margin-top: 12px;
+
+    .destinations-container {
+        .page-title-container {
+            display: flex;
+            justify-content: center;
+
+            span {
+                padding-right: 20px;
+                color: rgba($color: $white, $alpha: .25);
+                font-family: $barlow-condensed;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+            }
+
+            p {
+                color: $white;
+                font-family: $barlow-condensed;
+                font-size: 16px;
+                font-weight: 200;
+                letter-spacing: 1.5px;
+            }
+        }
+
+        .page-content-container {
+            .image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 300px;
+                margin: 40px auto;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+            .destination-content-container {
+                .destination-tab-container {
+                    display: flex;
+                    justify-content: center;
+
+                    .destination {
+                        margin: 0 16px;
+                        padding: 10px 0;
+                        list-style: none;
+
+                        a {
+                            color: $light-blue;
+                            font-family: $barlow-condensed;
+                            font-size: 14px;
+                            font-weight: 200;
+                            letter-spacing: 1.5px;
+                            text-decoration: none;
+                        }
+                    }
+
+                    li[id="moon"],
+                    li[id="mars"],
+                    li[id="europa"],
+                    li[id="titan"] {
+                        border-bottom: 3px solid $white;
+
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+
+                .destination-description-container {
+                    width: 80%;
+                    max-width: 688px;
+                    margin: 20px auto 0;
+
+                    .description-container {
+                        list-style: none;
+
+                        .texts {
+                            text-align: center;
+
+                            .name-destiny {
+                                margin-bottom: 10px;
+                                color: $white;
+                                font-family: $bellefair;
+                                font-size: 56px;
+                                font-weight: normal;
+                            }
+
+                            .description-destiny {
+                                color: $light-blue;
+                                font-family: $barlow-condensed;
+                                font-size: 15px;
+                                font-weight: 200;
+                                line-height: 180%;
+                            }
+                        }
+
+                        .line-decoration {
+                            height: 1px;
+                            margin: 20px 0;
+                            background-color: rgba($color: $white, $alpha: .25);
+                        }
+
+                        .statistics {
+                            text-align: center;
+
+                            .distance-container {
+                                margin-bottom: 20px;
+
+                                .avg-distance {
+                                    margin-bottom: 10px;
+                                    color: $light-blue;
+                                    font-family: $barlow-condensed;
+                                    font-size: 14px;
+                                    font-weight: 200;
+                                    letter-spacing: 2px;
+                                }
+
+                                .distance {
+                                    margin-bottom: 10px;
+                                    color: $white;
+                                    font-family: $bellefair;
+                                    font-size: 28px;
+                                    font-weight: normal;
+                                }
+                            }
+
+                            .travel-time-container {
+                                margin-bottom: 20px;
+
+                                .text-travel-time {
+                                    margin-bottom: 10px;
+                                    color: $light-blue;
+                                    font-family: $barlow-condensed;
+                                    font-size: 14px;
+                                    font-weight: 200;
+                                    letter-spacing: 2px;
+                                }
+
+                                .travel-time {
+                                    margin-bottom: 10px;
+                                    color: $white;
+                                    font-family: $bellefair;
+                                    font-size: 28px;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 599px) {
     .body-home-page {
         background-image: url(../assets/home/background-home-mobile.jpg);
     }
 
-    .body-destinations {
-        background-image: url(../assets/destination/background-destination-mobile.jpg);
+    .body-moon {
+        background-image: url(../assets/destination/background-destination-mobile.png);
     }
 
     header {
@@ -230,8 +394,9 @@ header {
                         }
 
                         a {
-                            display: inline-block;
+                            display: inline-flex;
                             width: 86%;
+                            line-height: normal;
                         }
                     }
 
@@ -257,6 +422,10 @@ header {
 @media (min-width: 600px) and (max-width: 1023px) {
     .body-home-page {
         background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+
+    .body-moon {
+        background-image: url(../assets/destination/background-destination-tablet.png);
     }
 
     header {
@@ -289,7 +458,6 @@ header {
                     display: flex;
 
                     li {
-                        padding: 32px 0;
                         margin: 0 auto;
 
                         span {
@@ -355,12 +523,66 @@ header {
             }
         }
     }
+
+    .main-destination-moon {
+        .destinations-container {
+            .page-title-container {
+                justify-content: start;
+                width: 88%;
+                margin: 40px auto;
+            }
+
+            .page-content-container {
+                .image-container {
+                    margin-bottom: 60px;
+
+                    img {
+                        width: 300px;
+                        height: 300px;
+                    }
+                }
+
+                .destination-content-container {
+                    .destination-tab-container {
+                        .destination {
+                            a {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .destination-description-container {
+                        .description-container {
+                            .texts {
+                                .name-destiny {
+                                    font-size: 80px;
+                                }
+
+                                .description-destiny {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .statistics {
+                                display: flex;
+                                justify-content: space-around;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1024px) {
     .body-home-page {
         background-image: url(../assets/home/background-home-desktop.jpg);
         overflow: hidden;
+    }
+
+    .body-moon {
+        background-image: url(../assets/destination/background-destination-desktop.png);
     }
 
     header {
@@ -395,7 +617,6 @@ header {
                     justify-content: end;
 
                     li {
-                        padding: 32px 0;
                         margin: 0px 20px;
 
                         span {
@@ -477,6 +698,60 @@ header {
                     .button-container:hover {
                         .button-effect {
                             transform: scale(1.4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-destination-moon {
+        .destinations-container {
+            .page-title-container {
+                justify-content: start;
+                width: 80%;
+                margin: 0 auto 80px;
+
+                span {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 28px;
+                }
+            }
+
+            .page-content-container {
+                display: flex;
+                margin-bottom: 50px;
+
+                .image-container {
+                    width: 50%;
+                    margin: 0;
+
+                    img {
+                        width: 480px;
+                        height: 480px;
+                    }
+                }
+
+                .destination-content-container {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    .destination-tab-container {
+                        justify-content: start;
+                    }
+
+                    .destination-description-container {
+                        margin: 20px 0 0;
+                        padding-left: 16px;
+
+                        .description-container {
+                            .description {
+                                text-align: start;
+                            }
                         }
                     }
                 }

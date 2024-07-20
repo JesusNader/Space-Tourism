@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./public/favicon-32x32.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>01 | Destination Moon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/index.css">
+</head>
+
+<body class="body-moon">
+  <header>
+    <section class="left-header-section">
+      <figure class="logo-container">
+        <img src="./src/assets/shared/logo.svg" alt="space-tourism-container" class="logo">
+      </figure>
+    </section>
+    <section class="right-header-section">
+      <div class="menu-mobile-container"></div>
+      <nav class="nav-menu-container">
+        <div class="menu-close-container"></div>
+        <ul class="nav-list-container">
+          <li>
+            <a href="./index.html">
+              <span>00</span>
+              <p>HOME</p>
+            </a>
+          </li>
+          <li class="destination">
+            <a href="./destination-moon.html">
+              <span>01</span>
+              <p>DESTINATION</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>02</span>
+              <p>CREW</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>03</span>
+              <p>TECHNOLOGY</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+  <main class="main-destination-moon">
+    <section class="destinations-container section-moon-destinity">
+      <div class="page-title-container">
+        <span>01</span>
+        <p>PICK YOUR DESTINATION</p>
+      </div>
+      <div class="page-content-container">
+        <figure class="image-container">
+          <img src="./src/assets/destination/image-moon.webp" alt="moon">
+        </figure>
+        <div class="destination-content-container">
+          <ul class="destination-tab-container">
+            <li class="destination" id="moon">
+              <a href="./destination-moon.html">MOON</a>
+            </li>
+            <li class="destination">
+              <a href="#">MARS</a>
+            </li>
+            <li class="destination">
+              <a href="#">EUROPA</a>
+            </li>
+            <li class="destination">
+              <a href="#">TITAN</a>
+            </li>
+          </ul>
+          <div class="destination-description-container">
+            <ul class="description-container">
+              <li class="description texts">
+                <h2 class="name-destiny">MOON</h2>
+                <p class="description-destiny">
+                  See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective
+                  and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11
+                  landing sites.
+                </p>
+              </li>
+              <li class="description line-decoration"></li>
+              <li class="description statistics">
+                <div class="distance-container">
+                  <p class="avg-distance">AVG. DISTANCE</p>
+                  <h3 class="distance">384,400 KM</h3>
+                </div>
+                <div class="travel-time-container">
+                  <p class="text-travel-time">EST. TRAVEL TIME</p>
+                  <h3 class="travel-time">3 DAYS</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
